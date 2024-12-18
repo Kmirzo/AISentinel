@@ -1,0 +1,111 @@
+.home-container {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  width: auto;
+  height: auto;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(-45deg, #003b5d, #5f0085, #000000, #000000);
+  animation: gradient 15s ease infinite;
+  -webkit-animation: gradient 15s ease infinite;
+  background-size: 200% 200%;
+}
+
+.home-container a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.home-container .nav-item {
+  transition: text-shadow 1s ease, color 1s ease;
+}
+.home-container .nav-item:hover {
+  text-shadow: 0 0 5px #00bfff, 0 0 10px #1e90ff, 0 0 20px #e066ff,
+    0 0 30px #ffffff;
+}
+
+.home-container .nav-item a {
+  margin-top: 8px;
+  color: #f3f3e0;
+}
+
+.home-container .nav-item a.disabled {
+  color: #898071;
+}
+
+.home-container .navigation-menu {
+  position: relative;
+  z-index: 10000;
+  color: #091057;
+  font-size: 40px;
+  font-family: monospace;
+}
+
+.home-container .animation-frame {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.home-container .animation-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+}
+
+.home-container .sphere-animation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 580px;
+  height: 580px;
+}
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* .home-container .sphere path {
+  fill: url(#sphereGradient);
+  stroke-width: 1px;
+  stroke: rgba(80, 80, 80, 0.35);
+  backface-visibility: hidden;
+}
+
+@media (min-width: 500px) {
+  .sphere path {
+    stroke-width: 0.4px;
+  }
+} */

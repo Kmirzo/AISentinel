@@ -1,0 +1,61 @@
+<%- include('includes/header') %>
+
+<link rel="stylesheet" type="text/css" href="/css/home.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.js"></script>
+
+<body>
+  <div class="home-container">
+    <div class="navigation-menu">
+      <ul class="nav justify-content-center">
+        <li class="nav-item" style="cursor: pointer">
+          <a class="nav-link active" href="/admin">Home</a>
+        </li>
+        <% if(!member) { %>
+        <li class="nav-item" style="cursor: pointer">
+          <a class="nav-link" href="/admin/signup">Signup</a>
+        </li>
+        <li class="nav-item" style="cursor: pointer">
+          <a class="nav-link" href="/admin/login">Login</a>
+        </li>
+        <% } else { %>
+        <li class="nav-item" style="cursor: pointer">
+          <a class="nav-link" href="/admin/product/all">Menu</a>
+        </li>
+        <li class="nav-item" style="cursor: pointer">
+          <a class="nav-link" href="/admin/user/all">Users</a>
+        </li>
+        <li
+          class="nav-item"
+          style="cursor: pointer"
+          onclick="return confirm('Do you want to logout?')"
+        >
+          <a class="nav-link" href="/admin/logout">Logout</a>
+        </li>
+        <% } %>
+      </ul>
+    </div>
+
+    <div class="animation-frame">
+      <div class="animation-wrapper">
+        <div class="sphere-animation">
+          <script
+            src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+            type="module"
+          ></script>
+          <dotlottie-player
+            src="https://lottie.host/59645c14-096e-46db-83fe-2ec894d08b29/r0MarpP4bT.lottie"
+            background="transparent"
+            speed="1"
+            style="width: 680px; height: 680px"
+            loop
+            autoplay
+          ></dotlottie-player>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="/js/home.js"></script>
+</body>
+
+<%- include('includes/footer') %>
