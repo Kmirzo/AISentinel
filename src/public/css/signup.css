@@ -6,7 +6,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(-45deg, #003b5d, #5f0085, #000000, #000000);
+  background: linear-gradient(-45deg, #003b5d, #0c00bb, #d4d4d4, #0284ca);
   animation: gradient 15s ease infinite;
   -webkit-animation: gradient 15s ease infinite;
   background-size: 200% 200%;
@@ -120,6 +120,12 @@ p {
 }
 .signup-container .media-frame .upload-container .file-input-label {
   background-color: #33a0ff94;
+  cursor: pointer;
+}
+
+.signup-container .media-frame .upload-container .file-input-label:hover {
+  background: #ffffff;
+  color: #0061b5;
 }
 
 .signup-container .media-text {
@@ -171,8 +177,27 @@ p {
   border-radius: 8px 0px 0px 8px;
 }
 .signup-container .signup-frame .signup-btn {
+  position: relative;
+  margin-top: 25px;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: #33a0ff94;
+  border-radius: 10px;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 33px;
+  letter-spacing: -0.02em;
   color: #cbdceb;
+}
+
+.signup-container .signup-frame .signup-btn:hover {
+  background: #ffffff;
+  color: #0061b5;
 }
 
 .signup-container .thumbnail-desc {
