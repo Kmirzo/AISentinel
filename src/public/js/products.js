@@ -3,12 +3,12 @@ console.log("Products frontend javascript file");
 $(function () {
   $(".product-collection").on("change", () => {
     const selectedValue = $(".product-collection").val();
-    if (selectedValue === "DRINK") {
-      $("#product-collection").hide();
-      $("#product-volume").show();
+    if (selectedValue === "HDCVI_CAMERAS") {
+      $("#product-environment").hide();
+      $("#product-usage").show();
     } else {
-      $("#product-volume").hide();
-      $("#product-collection").show();
+      $("#product-usage").hide();
+      $("#product-environment").show();
     }
   });
 

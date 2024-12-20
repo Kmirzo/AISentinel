@@ -1,16 +1,17 @@
-export enum ProductSize {
-  SMALL = "SMALL",
-  NORMAL = "NORMAL",
-  LARGE = "LARGE",
-  SET = "SET",
+export enum ProductResolution {
+  FHD = "1080p",
+  QHD = "2K",
+  UHD = "4K",
 }
 
-export enum ProductVolume {
-  HALF = 0.5,
-  ONE = 1,
-  ONE_POINT_TWO = 1.2,
-  ONE_POINT_FIVE = 1.5,
-  TWO = 2,
+export enum ProductUsage {
+  HOME = "HOME",
+  OFFICE = "OFFICE",
+}
+
+export enum ProductEnviroment {
+  INDOOR = "INDOOR",
+  OUTDOOR = "OUTDOOR",
 }
 
 export enum ProductStatus {
@@ -20,17 +21,29 @@ export enum ProductStatus {
 }
 
 export enum ProductCollection {
-  DISH = "DISH",
-  SALAD = "SALAD",
-  DRINK = "DRINK",
-  DESSERT = "DESSERT",
-  BEVERAGES = "BEVERAGES",
-  APPETIZERS = "APPETIZERS",
+  HOME_DOOR_PHONE = "HOME_DOOR_PHONE",
+  HDCVI_CAMERAS = "HDCVI_CAMERAS",
+  VIDEO_CONFERENCE = "VIDEO_CONFERENCE",
+  ACCESSORIES = "ACCESSORIES",
 }
 
-export enum ProductDietaryInfo {
-  VEGETARIAN = "VEGETARIAN",
-  VEGAN = "VEGAN",
-  GLUTEN_FREE = "GLUTEN_FREE",
-  NON_VEGETARIAN = "NON_VEGETARIAN",
+export enum ProductConnectivity {
+  WIRED = "WIRED",
+  WIRELESS = "WIRELESS",
+}
+
+export enum ProductPowerSource {
+  BATTERY_POWERED = "BATTERY_POWERED",
+  AC_DC_POWER = "AC_DC_POWER",
+}
+
+export enum ProductExtraFeatures {
+  NIGHT_VISION = "NIGHT_VISION",
+  TOUCHSCREEN = "TOUCHSCREEN",
+  MULTI_USER = "MULTI_USER",
+}
+
+export enum ProductStorage {
+  CLOUD_STORAGE = "CLOUD_STORAGE",
+  ON_DEVICE_STORAGE = "ON_DEVICE_STORAGE",
 }

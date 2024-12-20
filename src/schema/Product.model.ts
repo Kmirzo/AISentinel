@@ -1,10 +1,14 @@
 import mongoose, { Schema } from "mongoose";
 import {
-  ProductDietaryInfo,
   ProductCollection,
-  ProductSize,
   ProductStatus,
-  ProductVolume,
+  ProductResolution,
+  ProductConnectivity,
+  ProductPowerSource,
+  ProductExtraFeatures,
+  ProductStorage,
+  ProductUsage,
+  ProductEnviroment,
 } from "../libs/enums/product.enum";
 
 const productSchema = new Schema(
@@ -31,34 +35,56 @@ const productSchema = new Schema(
       type: Number,
       required: true,
     },
-    productSize: {
+    productResolution: {
       type: String,
-      enum: ProductSize,
-      default: ProductSize.NORMAL,
+      enum: ProductResolution,
+      default: ProductResolution.FHD,
     },
-    productVolume: {
-      type: Number,
-      enum: ProductVolume,
-      default: ProductVolume.ONE,
-    },
+
     productDesc: {
       type: String,
     },
+
     productImages: {
       type: [String],
       default: [],
     },
+
     productViews: {
       type: Number,
       default: 0,
     },
-    productCalorie: {
-      type: Number,
+
+    productConnectivity: {
+      type: String,
+      enum: ProductConnectivity,
       required: true,
     },
-    productDietaryInfo: {
+
+    productPowerSource: {
       type: String,
-      enum: ProductDietaryInfo,
+      enum: ProductPowerSource,
+      required: true,
+    },
+
+    productExtraFeatures: {
+      type: String,
+      enum: ProductExtraFeatures,
+    },
+
+    productUsage: {
+      type: String,
+      enum: ProductUsage,
+    },
+
+    productEnviroment: {
+      type: String,
+      enum: ProductEnviroment,
+    },
+
+    productStorage: {
+      type: String,
+      enum: ProductStorage,
       required: true,
     },
   },
@@ -66,7 +92,7 @@ const productSchema = new Schema(
 );
 
 productSchema.index(
-  { productSize: 1, productName: 1, productVolume: 1 },
+  { productConnectivity: 1, productName: 1, productResolution: 1 },
   { unique: true }
 );
 export default mongoose.model("Product", productSchema);

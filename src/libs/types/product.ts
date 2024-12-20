@@ -1,9 +1,11 @@
 import { ObjectId } from "mongoose";
 import {
   ProductCollection,
-  ProductSize,
   ProductStatus,
-  ProductDietaryInfo,
+  ProductResolution,
+  ProductConnectivity,
+  ProductPowerSource,
+  ProductStorage,
 } from "../enums/product.enum";
 
 export interface Product {
@@ -13,10 +15,10 @@ export interface Product {
   productName: String;
   productPrice: number;
   productLeftCount: number;
-  productSize: ProductSize;
-  productVolume: number;
-  productCalorie: number;
-  productDietaryInfo: ProductDietaryInfo;
+  productStorage: ProductStorage;
+  productResolution: ProductResolution;
+  productConnectivity: ProductConnectivity;
+  productPowerSource: ProductPowerSource;
   productDesc?: string;
   productImages: string[];
   productViews: number;
@@ -29,8 +31,8 @@ export interface ProductInquiry {
   page: number;
   limit: number;
   productCollection?: ProductCollection;
-  productCalorie?: number;
-  productDietaryInfo?: ProductDietaryInfo;
+  productConnectivity?: ProductConnectivity;
+  productResolution?: ProductResolution;
   search?: string;
 }
 
@@ -40,10 +42,10 @@ export interface ProductInput {
   productName: String;
   productPrice: number;
   productLeftCount: number;
-  productSize?: ProductSize;
-  productVolume?: number;
-  productCalorie?: number;
-  productDietaryInfo: String;
+  productStorage?: ProductStorage;
+  productResolution: ProductResolution;
+  productConnectivity?: ProductConnectivity;
+  productPowerSource: ProductPowerSource;
   productDesc?: string;
   productImages?: string[];
   productViews?: number;
@@ -56,11 +58,13 @@ export interface ProductUpdateInput {
   productName?: String;
   productPrice?: number;
   productLeftCount?: number;
-  productSize?: ProductSize;
-  productVolume?: number;
-  productCalorie?: number;
-  productDietaryInfo: ProductDietaryInfo;
+  productStorage?: ProductStorage;
+  productResolution: ProductResolution;
+  productConnectivity?: ProductConnectivity;
+  productPowerSource: ProductPowerSource;
   productDesc?: string;
+  productUsage: string;
+  productEnvironment: string;
   productImages?: string[];
   productViews?: number;
 }
