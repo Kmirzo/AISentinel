@@ -4,11 +4,11 @@ $(function () {
   $(".product-collection").on("change", () => {
     const selectedValue = $(".product-collection").val();
     if (selectedValue === "HDCVI_CAMERAS") {
-      $("#product-environment").hide();
-      $("#product-usage").show();
+      $("#product-collection").hide();
+      $("#product-volume").show();
     } else {
-      $("#product-usage").hide();
-      $("#product-environment").show();
+      $("#product-volume").hide();
+      $("#product-collection").show();
     }
   });
 

@@ -8,7 +8,7 @@ import {
   ProductExtraFeatures,
   ProductStorage,
   ProductUsage,
-  ProductEnviroment,
+  ProductEnvironment,
 } from "../libs/enums/product.enum";
 
 const productSchema = new Schema(
@@ -38,7 +38,6 @@ const productSchema = new Schema(
     productResolution: {
       type: String,
       enum: ProductResolution,
-      default: ProductResolution.FHD,
     },
 
     productDesc: {
@@ -58,13 +57,11 @@ const productSchema = new Schema(
     productConnectivity: {
       type: String,
       enum: ProductConnectivity,
-      required: true,
     },
 
     productPowerSource: {
       type: String,
       enum: ProductPowerSource,
-      required: true,
     },
 
     productExtraFeatures: {
@@ -77,15 +74,14 @@ const productSchema = new Schema(
       enum: ProductUsage,
     },
 
-    productEnviroment: {
+    productEnvironment: {
       type: String,
-      enum: ProductEnviroment,
+      enum: ProductEnvironment,
     },
 
     productStorage: {
       type: String,
       enum: ProductStorage,
-      required: true,
     },
   },
   { timestamps: true } //UpdatedAt , CreatedAt

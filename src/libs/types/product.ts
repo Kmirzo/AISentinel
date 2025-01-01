@@ -6,6 +6,9 @@ import {
   ProductConnectivity,
   ProductPowerSource,
   ProductStorage,
+  ProductExtraFeatures,
+  ProductUsage,
+  ProductEnvironment,
 } from "../enums/product.enum";
 
 export interface Product {
@@ -16,9 +19,12 @@ export interface Product {
   productPrice: number;
   productLeftCount: number;
   productStorage: ProductStorage;
+  productEnvironment: ProductEnvironment;
   productResolution: ProductResolution;
   productConnectivity: ProductConnectivity;
   productPowerSource: ProductPowerSource;
+  productExtraFeatures: ProductExtraFeatures;
+  productUsage: ProductUsage;
   productDesc?: string;
   productImages: string[];
   productViews: number;
@@ -31,8 +37,6 @@ export interface ProductInquiry {
   page: number;
   limit: number;
   productCollection?: ProductCollection;
-  productConnectivity?: ProductConnectivity;
-  productResolution?: ProductResolution;
   search?: string;
 }
 
@@ -43,9 +47,12 @@ export interface ProductInput {
   productPrice: number;
   productLeftCount: number;
   productStorage?: ProductStorage;
-  productResolution: ProductResolution;
+  productEnvironment?: ProductEnvironment;
+  productResolution?: ProductResolution;
   productConnectivity?: ProductConnectivity;
-  productPowerSource: ProductPowerSource;
+  productPowerSource?: ProductPowerSource;
+  productExtraFeatures?: ProductExtraFeatures;
+  productUsage?: ProductUsage;
   productDesc?: string;
   productImages?: string[];
   productViews?: number;
@@ -59,12 +66,13 @@ export interface ProductUpdateInput {
   productPrice?: number;
   productLeftCount?: number;
   productStorage?: ProductStorage;
-  productResolution: ProductResolution;
+  productEnvironment?: ProductEnvironment;
+  productUsage?: ProductUsage;
+  productResolution?: ProductResolution;
   productConnectivity?: ProductConnectivity;
-  productPowerSource: ProductPowerSource;
+  productPowerSource?: ProductPowerSource;
+  productExtraFeatures?: ProductExtraFeatures;
   productDesc?: string;
-  productUsage: string;
-  productEnvironment: string;
   productImages?: string[];
   productViews?: number;
 }

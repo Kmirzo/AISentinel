@@ -182,6 +182,7 @@
   font-size: 15px;
   line-height: 26px;
   color: #4f547b;
+  justify-content: space-between;
 }
 
 .products-container .dish-container .half-input-frame {

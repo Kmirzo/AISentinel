@@ -75,7 +75,7 @@
               <td><%= value.productCollection %></td>
               <td>
                 <%= value.productCollection === 'HDCVI_CAMERAS' ? value.productUsage :
-                value.producEnviroment %>
+                value.productEnvironment %>
               </td>
               <td><%= value.productResolution %></td>
               <td><%= value.productConnectivity %></td>
@@ -168,31 +168,62 @@
 
             <div class="half-input" id="product-collection">
               <label> Product Enviroment</label>
-              <select class="product-size" name="productSize">
+              <select class="product-environment" name="productEnvironment">
                 <option value="INDOOR">Indoor</option>
                 <option value="OUTDOOR" selected>Outdoor</option>
+                <option value="EXTRA">Extra</option>
               </select>
             </div>
 
-            <div class="half-input" id="product-volume" style="display: none">
+            <div class="half-input" id="product-usage"  style="display: none">
               <label>Product Usage</label>
-              <select class="product-usage" name="productVolume">
-                <option value="HOME">Home</option>
-                <option value="OFFICE" selected>Office</option>
+              <select class="product-usage" name="productUsage">
+                <option value="HOME" selected>Home</option>
+                <option value="OFFICE">Office</option>
               </select>
             </div>
           </div>
+
           <div class="half-input-frame">
-          <div class="half-input" >
+            <div class="half-input" id="product-resolution">
+              <label>Product Resolution</label>
+               <select  class="product-resolution" name="productResolution">
+                  <option value="FHD">1080p</option>
+                  <option value="QHD" selected>2K</option>
+                  <option value="UHD" selected>4K</option>
+                </select>
+            </div>
+            <div class="half-input"  id="product-storage">
+              <label>Product Storage</label>
+              <select name="productStorage" class="product-storage">
+                <option value="CLOUD_STORAGE">Cloud Storage</option>
+                <option value="ON_DEVICE_STORAGE">On Device Storage</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="long-input">
+            <div  id="product-extra-features">
+              <label>Product Extra Features</label>
+              <select name="productExtraFeatures" class="product-extra-features">
+                <option value="NIGHT_VISION">Night Vision</option>
+                <option value="TOUCHSCREEN">Touchscreen</option>
+                <option value="MULTI_USER">Multi User</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="half-input-frame">
+          <div class="half-input" id="product-connectivity" >
             <label>Product Connectivity</label>
-             <select  class="product-left-count" name="productCalorie">
+             <select  class="product-connectivity" name="productConnectivity">
                 <option value="WIRED">Wired</option>
-                <option value="WIRELESS" selected>Wireless</option>
+                <option value="WIRELESS">Wireless</option>
               </select>
           </div>
-          <div class="half-input"  id="product-diet">
-            <label>Product PowerSource</label>
-            <select name="productDietaryInfo" class="product-diet">
+          <div class="half-input"  id="product-power-source">
+            <label>Product Power Source</label>
+            <select name="productPowerSource" class="product-power-source">
               <option value="BATTERY_POWERED">Battery Powered</option>
               <option value="AC_DC_POWER">AC-DC Power</option>
             </select>
